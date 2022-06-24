@@ -10,7 +10,6 @@ class PostListView(ListView):
     model = Post
     def get_queryset(self):
         return super().get_queryset().filter(status="published")
-    paginate_by = 4
     template_name = "blog/post_list.html"
     
     
